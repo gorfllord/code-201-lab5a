@@ -56,7 +56,7 @@ function sumAndMultiply(a, b, c) { //eslint-disable-line
   productResult = multiply(productResult, c)[0];
   return [sumResult, productResult, `${a} and ${b} and ${c} sum to ${sumResult}.`, `The product of ${a} and ${b} and ${c} is ${productResult}.`];
 }
-console.log(sumAndMultiply(4, 7, 5));
+
 // Here is the test for sumAndMultiply(); uncomment it to run it
 testSumAndMultiply(4,7,5);
 
@@ -78,7 +78,7 @@ let testArray = [2, 3, 4]; //eslint-disable-line
 function sumArray(sumArr) { //eslint-disable-line
   let sumResult = 0;
   for (let i = 0; i < sumArr.length; i++) {
-    sumResult = sum(sumResult, sumArr[i]);
+    sumResult = sum(sumResult, sumArr[i])[0];
   }
   return [sumResult, `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sumResult} is their sum.`];
 }
